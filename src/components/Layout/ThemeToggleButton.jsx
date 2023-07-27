@@ -27,7 +27,7 @@ const ThemeToggleButton = () => {
 
   return (
     <button
-      className="w-20 h-10 rounded-full bg-[#87CEEB] dark:bg-slate-700 flex items-center transition duration-300 focus:outline-none shadow-xl"
+      className="w-20 h-10 rounded-full bg-[#ddd] dark:bg-slate-700 flex items-center transition duration-300 focus:outline-none shadow-xl"
       onClick={toggleThemeHandler}
     >
 
