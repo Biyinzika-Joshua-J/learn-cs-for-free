@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Routes, Route } from "react-router";
+import { Navbar, Footer } from "./components";
+import { Home } from "./pages";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun } from "@fortawesome/free-regular-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function App() {
+  const mode = useSelector(state => state.theme.mode)
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${mode} `}>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<div><FontAwesomeIcon icon={faSun} size="lg" style={{color:'yellow'}}/></div>} />
+        <Route path="/courses" element={<div>Courses</div>} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
