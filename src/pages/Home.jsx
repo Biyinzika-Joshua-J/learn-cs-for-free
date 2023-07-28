@@ -1,10 +1,13 @@
 import React from 'react'
-import { Hero } from '../components'
+import { Hero, FindCourse, StartLearning, Courses } from '../components'
 
 const Home = () => {
   return (
     <div>
         <Hero/>
+        <FindCourse/>
+        <StartLearning/>
+        <Courses/>
     </div>
   )
 }
