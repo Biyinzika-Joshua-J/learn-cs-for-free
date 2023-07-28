@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CourseCard = ({ title, bio, id, image, level }) => {
   return (
-    <Link to={"/about"} className="block max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full flex flex-col">
+    <Link to={"/about"} className="block max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 h-full flex flex-col">
       <img className="rounded-t-lg h-36 w-full object-cover" src={image} alt="" />
       <div className="p-5 flex-grow flex flex-col justify-between">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -7,5 +7,9 @@ export {default as FindCourse} from './FindCourse/FindCourse'
 export {default as StartLearning} from './StartLearning/StartLearning'
 export {default as Courses} from './Courses/Courses'
 export {default as CourseCard} from './Cards/CourseCard'
-
-
+export {default as CourseHeader} from './CourseHeader/CourseHeader'
+export {default as Tabs} from './Tabs/Tabs'
+export {default as TabsContentResults} from './TabsContentResults/TabsContentResults'
+export {default as AboutCourse} from './AboutCourse/AboutCourse'
+export {default as CourseContent} from './CourseContent/CourseContent'
+export {default as CourseResources} from './CourseResources/CourseResources'
