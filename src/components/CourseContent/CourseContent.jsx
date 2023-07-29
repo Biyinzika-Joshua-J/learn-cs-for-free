@@ -1,8 +1,18 @@
 import React from 'react'
+import {CourseOutline} from '../'
 
 const CourseContent = () => {
   return (
-    <div>CourseContent</div>
+    <div className='py-8'>
+      <div className="mx-auto w-[80%]">
+      
+        <CourseOutline/>
+        <CourseOutline/>
+        <CourseOutline/>
+        <CourseOutline/>
+        <CourseOutline/>
+      </div>
+    </div>
   )
 }
 

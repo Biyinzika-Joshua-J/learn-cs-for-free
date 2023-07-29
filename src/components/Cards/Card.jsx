@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CourseCard = ({ title, bio, id, image, level }) => {
+const Card = ({ title, bio, id, image, level, link }) => {
   return (
     <Link to={"/about"} className="block max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 h-full flex flex-col">
       <img className="rounded-t-lg h-36 w-full object-cover" src={image} alt="" />
@@ -12,14 +12,23 @@ const CourseCard = ({ title, bio, id, image, level }) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {bio}
         </p>
-        <div className=" flex flex-row justify-between">
+      {
+        level && <div className=" relative">
+          <div className="w-[100%] h-1 bg-gray-200"></div>
+          <div className="absolute top-0 left-0 w-[0%] h-1 bg-blue-400"></div>
+          <div className="italic py-2">
+            0% progress
+          </div>
+        </div>
+      }
+      {level &&  <div className=" flex flex-row justify-between">
           <div className="">
             <span className="font-bold">Level:</span>
           </div>
           <div className="italic">
             <span className={level==='Beginner'?'text-blue-500':level==='Intermediate'?'text-green-600':'text-red-500' }>{level}</span>
           </div>
-        </div>
+        </div>}
         {/*<a
           href="#"
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -46,4 +55,4 @@ const CourseCard = ({ title, bio, id, image, level }) => {
   );
 };
 
-export default CourseCard;
+export default Card;

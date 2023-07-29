@@ -1,5 +1,5 @@
 import React from 'react'
-import {CourseCard} from '../'
+import {Card} from '../'
 import { coursesList } from '../../data/courses_list'
 
 const Courses = () => {
@@ -9,7 +9,7 @@ const Courses = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 ">
             {
                 coursesList["courses"].map((course, idx) => (
-                    <CourseCard title={course.courseName} bio={course.shortBio} level={course.level} id={course.courseId} image={course.image}/>
+                    <Card title={course.courseName} bio={course.shortBio} level={course.level} id={course.courseId} image={course.image}/>
                 ))
             }
               
