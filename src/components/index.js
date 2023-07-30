@@ -19,7 +19,7 @@ export {default as LearnCourseContentOutline} from './LearnCourseContentOutline/
 export {default as LearnContentMenu} from './LearnCourseContentOutline/LearnContentMenu'
 export {default as LearnContentMenuItem} from './LearnCourseContentOutline/LearnContentMenuItem'
 export {default as VideoContainer} from './VideoContainer/VideoContainer'
-
-
+export {default as VideoTabs} from './VideoTabs/VideoTabs'
+export {default as VideoTabsResults} from './VideoTabsResults/VideoTabsResults'
 
 
