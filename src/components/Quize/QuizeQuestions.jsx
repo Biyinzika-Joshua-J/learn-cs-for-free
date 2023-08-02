@@ -5,6 +5,7 @@ import {
   faArrowRight,
   faArrowLeft,
   faCircleCheck,
+  faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { updateCurrentQuestion } from "../../features/quizeSlice";
 
@@ -14,8 +15,6 @@ const QuizeQuestions = ({ questions }) => {
     (state) => state.quize.currentQuestion
   );
   let correntAns = questions[currentQuestionIdx].correctAnswer[1];
-
-  console.log(correntAns);
 
   const [correctAnsBackgroundColor, setCorrectAnsBackgroundColor] =
     useState(false);
@@ -49,7 +48,7 @@ const QuizeQuestions = ({ questions }) => {
     }
   }
 
-  console.log(questions);
+
   return (
     <div className="flex justify-center relative  ">
       <div className="py-8 w-[100%] ">
@@ -66,9 +65,28 @@ const QuizeQuestions = ({ questions }) => {
               "bg-blue-400"
             } ${
               wrongAnsBackgroundColor && idx === wrongAnsIndex && "bg-red-500"
-            } block w-[100%] my-2 py-4 border-2 border-black `}
+            } block w-[100%] my-2 py-4 border-2 border-black font-bold `}
           >
-            {option}
+            {" "}
+            <span className="text-center px-4">{option}</span>
+            <span className="">
+              {correctAnsBackgroundColor && option === correntAns && (
+                <FontAwesomeIcon
+                  icon={faCircleCheck}
+                  size="1xl"
+                  style={{ color: "white" }}
+                />
+              )}
+            </span>
+            <span>
+              {wrongAnsBackgroundColor && idx === wrongAnsIndex && (
+                <FontAwesomeIcon
+                  icon={faCircleXmark}
+                  size="1xl"
+                  style={{ color: "white" }}
+                />
+              )}
+            </span>
           </button>
         ))}
 
@@ -79,7 +97,7 @@ const QuizeQuestions = ({ questions }) => {
               <FontAwesomeIcon
                 icon={faCircleCheck}
                 size="1xl"
-                style={{ color: "green" }}
+                style={{ color: "#3b82f6" }}
               />{" "}
               Correct Answer: {questions[currentQuestionIdx].correctAnswer[1]}{" "}
             </div>

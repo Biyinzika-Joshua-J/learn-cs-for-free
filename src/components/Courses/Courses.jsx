@@ -8,8 +8,8 @@ const Courses = () => {
         <div className="mx-auto w-[90%]">
             <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 ">
             {
-                coursesList["courses"].map((course, idx) => (
-                    <Card title={course.courseName} bio={course.shortBio} level={course.level} id={course.courseId} image={course.image}/>
+                coursesList["courses"].slice(0,4).map((course, idx) => (
+                    <Card url={'/course'} title={course.courseName} bio={course.shortBio} level={course.level} id={course.courseId} image={course.image}/>
                 ))
             }
               

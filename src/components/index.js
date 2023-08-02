@@ -1,4 +1,5 @@
 export {default as Navbar} from './Layout/Navbar'
+export {default as Menu} from './Layout/Menu'
 export {default as Footer} from './Layout/Footer'
 export {default as Hero} from './Hero/Hero'
 export {default as ThemeToggleButton} from './Layout/ThemeToggleButton'
