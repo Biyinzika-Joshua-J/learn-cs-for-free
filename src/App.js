@@ -1,7 +1,7 @@
 
 import { Routes, Route } from "react-router";
 import { Navbar, Footer } from "./components";
-import { Home, CourseDetails, Learn, Quizes, About } from "./pages";
+import { Home, CourseDetails, Learn, Quizes, About, Quize } from "./pages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,6 +19,7 @@ function App() {
         <Route path="/learn" element={<Learn />} /> {/*returns an interface where a user does the actual learning*/}
         <Route path="/about" element={<About/>} />
         <Route path="/quizes" element={<Quizes/>} />
+        <Route path="/quizes/:id" element={<Quize/>} />
         <Route path="/courses" element={<div>Courses</div>} />
       </Routes>
       <Footer />
