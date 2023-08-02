@@ -3,6 +3,7 @@ import { quizes } from "../data/quizes";
 import { Card } from "../components";
 import { useDispatch } from "react-redux";
 import { updateQuizeIsOpen } from "../features/quizeSlice";
+import { updateCurrentQuestion } from "../features/quizeSlice";
 
 const Quizes = () => {
 
@@ -10,6 +11,7 @@ const Quizes = () => {
 
   function openQuizeHandler(){
     dispatch(updateQuizeIsOpen());
+    dispatch(updateCurrentQuestion(0));
   }
 
   return (
