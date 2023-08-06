@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className="w-[100%] py-4 dark:bg-black relative">
+    <nav className="w-[100vw] py-4 dark:bg-black relative">
       <div className="mx-auto w-[90%] flex flex-row justify-between">
         <div className="text-3xl dark:text-white">
           <Link to={"/"}>

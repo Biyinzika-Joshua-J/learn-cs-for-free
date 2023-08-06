@@ -7,6 +7,7 @@ import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 
 
+
 function App() {
   const mode = useSelector(state => state.theme.mode)
  

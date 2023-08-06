@@ -25,4 +25,5 @@ export {default as VideoTabsResults} from './VideoTabsResults/VideoTabsResults'
 export {default as QuizeContainer} from './Quize/QuizeContainer'
 export {default as QuizeQuestions} from './Quize/QuizeQuestions'
 export {default as QuizeProgress} from './Quize/QuizeProgress'
+export {default as AccordionItem} from './AccordionItem/AccordionItem'
 
