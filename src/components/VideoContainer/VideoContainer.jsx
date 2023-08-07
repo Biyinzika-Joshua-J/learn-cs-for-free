@@ -16,7 +16,8 @@ const VideoContainer = () => {
                 <FontAwesomeIcon icon={faArrowCircleRight} style={{color:'#fff',}} size='xl'/>
             </button>
         </div>
-        <iframe className='w-[100%] h-[100%]' width="560" height="315" src="https://www.youtube.com/embed/d86ws7mQYIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe className='w-[100%] h-[100%]' width="560" height="315" src="https://www.youtube.com/embed/A3Ffwsnad0k?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
     </div>
   )
 }

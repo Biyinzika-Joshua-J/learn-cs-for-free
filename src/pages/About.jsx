@@ -26,7 +26,7 @@ const curriculumArray = [
   },
 ];
 
-console.log(curriculumArray);
+
 
 const About = () => {
   return (
@@ -54,12 +54,12 @@ const About = () => {
           <div class="grid grid-cols-2 gap-4 mt-8">
             <img
               class="w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+              src="https://cdn.pixabay.com/photo/2013/07/13/09/36/geometry-155757_1280.png"
               alt="office content 1"
             />
             <img
               class="mt-4 w-full lg:mt-10 rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+              src="https://cdn.pixabay.com/photo/2016/11/18/15/22/programmer-1835333_1280.png"
               alt="office content 2"
             />
           </div>
