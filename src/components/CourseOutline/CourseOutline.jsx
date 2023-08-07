@@ -11,7 +11,7 @@ const children =[
     }
 ]
 
-const CourseOutline = ({title, children}) => {
+const CourseOutline = ({topic, videos, total_lessons, total_mins, position, courseId}) => {
     const [open, setOpen] = useState(false)
     function openHandler(){
         setOpen(prev => !prev)
@@ -25,15 +25,18 @@ const CourseOutline = ({title, children}) => {
                 </button>
             </div>
             <div className="ml-8 flex flex-row items-center justify-between w-[100%] ">
-                <div className="font-bold">Introduction to computer science</div>
-                <div className="pr-4">20 lessons: 40 mins</div>
+                <div className="font-bold capitalize">{position}.{topic}</div>
+                <div className="pr-4">{total_lessons} lessons: {total_mins} mins</div>
             </div>
         </button>
        {open && <div className="border-2 border-gray-300 py-4 px-4">
-            <CourseOutlineItem/>
-            <CourseOutlineItem/>
-            <CourseOutlineItem/>
-            <CourseOutlineItem/>
+            {
+                videos.map((video, idx)=> (
+                    <CourseOutlineItem courseId={courseId} title={video.title} mins={video.minutes} url={video.youtubeUrl}/>
+                ))          
+            }
+            
+          
         </div>}
     </div>
   )

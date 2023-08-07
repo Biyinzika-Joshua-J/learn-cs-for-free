@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { LearnContentMenuItem } from "../";
-import courses_content from "../../data/courses_content";
-import { useParams } from "react-router";
+
+
 
 
 const children = [
@@ -14,9 +14,7 @@ const children = [
 ];
 
 const LearnContentMenu = ({ title, children }) => {
-  const id = useParams();
-  console.log(id)
-  console.log(courses_content["courses"])
+
   const [open, setOpen] = useState(false);
   function openHandler() {
     setOpen((prev) => !prev);

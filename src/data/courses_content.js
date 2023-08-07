@@ -1,11 +1,10 @@
 export default {
     "courses": {
-      "discreteMath": {
+      "MATH101": {
         "description": "Discrete math course description",
         "name": "Discrete Math",
         "books": [],
-        "content": [
-          {
+        "content": {
             "lessons": {
               "propositions":{ "total_lessons":2,"total_mins":40, "videos":[
                 {
@@ -19,7 +18,7 @@ export default {
                     "title": "Propositional logic in depth"
                   }
               ],
-              }, "logic": {"total_lessons":2,"total_mins":40, "video":[
+              }, "logic": {"total_lessons":2,"total_mins":40, "videos":[
                 {
                   "youtubeUrl": "https://www.youtube.com/embed/N2YHianzseI?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz",
                   "minutes": "17 mins",
@@ -33,7 +32,7 @@ export default {
               ]}
             }
           }
-        ]
+        
       }
     }
   }

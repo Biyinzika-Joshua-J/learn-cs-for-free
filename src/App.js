@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/course/:id" element={<CourseDetails/>} /> {/*will take course id and return details*/}
-        <Route path="/learn" element={<Learn/>} /> {/*returns an interface where a user does the actual learning*/}
+        <Route path="/learn/:id/:url?" element={<Learn/>} /> {/*returns an interface where a user does the actual learning*/}
         <Route path="/about" element={<About/>} />
         <Route path="/quizes" element={<Quizes/>} />
         <Route path="/quizes/:id" element={<Quize/>} />

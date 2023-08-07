@@ -1,7 +1,11 @@
 import React from "react";
 import { CourseHeader, Tabs, TabsContentResults } from "../components";
+import { useParams } from "react-router";
+import courses_content from "../data/courses_content";
 
 const CourseDetails = () => {
+  const {id:courseId} = useParams();
+  const {books, content, description, name} = courses_content["courses"][courseId]
   return (
     <>
       <CourseHeader
@@ -10,7 +14,7 @@ const CourseDetails = () => {
         }
       />
       <Tabs/>
-      <TabsContentResults/>
+      <TabsContentResults courseId={courseId} books={books} content={content} description={description} name={name} />
     </>
   );
 };
