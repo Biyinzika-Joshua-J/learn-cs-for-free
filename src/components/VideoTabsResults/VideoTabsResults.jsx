@@ -1,10 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AboutCourse, CourseContent, CourseResources,  } from "..";
+import courses_content from "../../data/courses_content";
 
 
-const TabsContentResults = () => {
+const TabsContentResults = ({courseId}) => {
   const activeTabIdx = useSelector((state) => state.videoTabs.activeTabIdx);
+  const content = courses_content["courses"][courseId]["content"]
+
+ 
+
 
   return (
     <div className="mx-auto w-[80%] pt-4 pb-8">
@@ -63,7 +68,7 @@ const TabsContentResults = () => {
         </div>
       )}
       {
-        activeTabIdx == 2 &&  <CourseContent/>
+        activeTabIdx == 2 &&  <CourseContent content={content}/>
       }
     </div>
   );

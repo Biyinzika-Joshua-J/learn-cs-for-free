@@ -6,7 +6,7 @@ export default {
         "books": [],
         "content": {
             "lessons": {
-              "propositions":{ "total_lessons":2,"total_mins":40, "videos":[
+              "propositions":{ "total_lessons":2,"total_mins":38, "videos":[
                 {
                   "youtubeUrl": "https://www.youtube.com/embed/A3Ffwsnad0k?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz",
                   "minutes": "20 mins",
@@ -18,7 +18,7 @@ export default {
                     "title": "Propositional logic in depth"
                   }
               ],
-              }, "logic": {"total_lessons":2,"total_mins":40, "videos":[
+              }, "logic": {"total_lessons":2,"total_mins":41, "videos":[
                 {
                   "youtubeUrl": "https://www.youtube.com/embed/N2YHianzseI?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz",
                   "minutes": "17 mins",

@@ -13,7 +13,7 @@ const children = [
   },
 ];
 
-const LearnContentMenu = ({ title, children }) => {
+const LearnContentMenu = ({ title, position, mins, lesonsNum, videos}) => {
 
   const [open, setOpen] = useState(false);
   function openHandler() {
@@ -23,12 +23,12 @@ const LearnContentMenu = ({ title, children }) => {
     <div className=" border-b-[1px] border-black">
       <button
         onClick={() => openHandler()}
-        className="flex flex-row items-center  border-1 border-gray-500 bg-gray-300 w-[100%]"
+        className="flex flex-row items-center justify-between  border-1 border-gray-500 bg-gray-300 w-[100%]"
       >
-        <div className=" flex flex-col  justify-between w-[100%] ">
-          <div className="font-bold">Introduction to computer science</div>
-          <div className="ml-4 mr-auto">
-            <span className="text-gray-500 text-[14px]" >1/20 | 40 mins</span>
+        <div className=" flex flex-col ml-2 items-start w-[100%] ">
+          <div className="font-bold capitalize">{position}. {title}</div>
+          <div className="ml-4 ">
+            <span className="text-gray-500 text-[14px]" >0/{lesonsNum}/ | {mins} mins</span>
           </div>
         </div>
         <div className="">
@@ -43,10 +43,12 @@ const LearnContentMenu = ({ title, children }) => {
       </button>
       {open && (
         <div className="border-2 border-gray-300 py-4 px-4">
-          <LearnContentMenuItem />
-          <LearnContentMenuItem />
-          <LearnContentMenuItem />
-          <LearnContentMenuItem />
+        {
+          videos.map((video, idx) => (
+            <LearnContentMenuItem key={idx} title={video.title} mins={video.minutes} url={video.youtubeUrl} />
+          ))
+        }
+         
         </div>
       )}
     </div>

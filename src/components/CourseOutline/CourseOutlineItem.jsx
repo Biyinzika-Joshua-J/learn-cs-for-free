@@ -13,7 +13,7 @@ const CourseOutlineItem = ({ title, mins, url, courseId }) => {
         <div className="pl-4">
           <Link
             className="text-blue-600 font-bold underline underline-offset-2"
-            to={`/learn/${courseId}`}
+            to={`/learn/${courseId}/`}
           >
             {title}
           </Link>
