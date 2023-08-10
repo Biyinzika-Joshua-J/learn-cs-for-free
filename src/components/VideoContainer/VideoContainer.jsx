@@ -7,12 +7,12 @@ const VideoContainer = () => {
   return (
     <div className='w-[100%] h-[80vh] bg-black relative hoverable'>
         <div className="absolute top-52 left-5 nav-btn">
-            <button className="">
+            <button className="" onClick={()=>{}}>
                 <FontAwesomeIcon icon={faArrowCircleLeft} style={{color:'#fff',}} size='xl'/>
             </button>
         </div>
         <div className="absolute top-52 right-5 nav-btn">
-            <button className="">
+            <button className="" onClick={()=>{}}>
                 <FontAwesomeIcon icon={faArrowCircleRight} style={{color:'#fff',}} size='xl'/>
             </button>
         </div>
