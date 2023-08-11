@@ -35,7 +35,7 @@ const CourseOutline = ({topic, videos, total_lessons, total_mins, position, cour
        {open && <div className="border-2 border-gray-300 py-4 px-4">
             {
                 videos.map((video, idx)=> (
-                    <CourseOutlineItem topicWithDashes={topicWithDashes} courseId={courseId} title={video.title} mins={video.minutes} url={video.youtubeUrl}/>
+                    <CourseOutlineItem videoNum={idx} topicWithDashes={topicWithDashes} courseId={courseId} title={video.title} mins={video.minutes} url={video.youtubeUrl}/>
                 ))          
             }
             

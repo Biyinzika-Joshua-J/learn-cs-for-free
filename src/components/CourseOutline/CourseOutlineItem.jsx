@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
-const CourseOutlineItem = ({ title, mins, url, courseId, topicWithDashes }) => {
+const CourseOutlineItem = ({ title, mins, url, courseId, topicWithDashes, videoNum }) => {
   return (
     <div className="flex flex-row items-center justify-between py-2">
       <div className="flex flex-row items-center">
@@ -13,7 +13,7 @@ const CourseOutlineItem = ({ title, mins, url, courseId, topicWithDashes }) => {
         <div className="pl-4">
           <Link
             className="text-blue-600 font-bold underline underline-offset-2"
-            to={`/learn/${courseId}/${topicWithDashes}`}
+            to={`/learn/${courseId}/${topicWithDashes}/${videoNum}`}
           >
             {title}
           </Link>
