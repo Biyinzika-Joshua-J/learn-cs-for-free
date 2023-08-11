@@ -7,7 +7,7 @@ const CourseContent = ({ content, courseId }) => {
   for (const lesson in lessons) {
     topics.push(lesson);
   }
-  console.log(lessons);
+
 
   return (
     <div className="py-8">
