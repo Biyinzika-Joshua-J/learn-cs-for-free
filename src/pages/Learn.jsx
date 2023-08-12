@@ -22,7 +22,7 @@ const Learn = () => {
           <VideoTabsResults courseId={courseId}/>
         </div>
         <div className="hidden lg:flex">
-          <LearnCourseContentOutline content={content}/>
+          <LearnCourseContentOutline content={content} topic={topic} video_idx={video_idx} courseId={courseId}/>
         </div>
       </div>
     </div>

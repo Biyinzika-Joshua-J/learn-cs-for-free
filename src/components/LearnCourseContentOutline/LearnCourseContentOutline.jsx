@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { LearnContentMenu } from "../";
 
-const LearnCourseContentOutline = ({ content }) => {
+const LearnCourseContentOutline = ({ content, video_idx, topic, courseId }) => {
   const topics = [];
   for (const topic in content["lessons"]) {
     topics.push(topic);
@@ -28,6 +28,8 @@ const LearnCourseContentOutline = ({ content }) => {
             mins={content["lessons"][topic]["total_mins"]}
             lesonsNum={content["lessons"][topic]["total_lessons"]}
             videos={content["lessons"][topic]["videos"]}
+            topic={topic}
+            courseId={courseId}
           />
         ))}
       </div>
