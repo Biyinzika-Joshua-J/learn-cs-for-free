@@ -8,6 +8,8 @@ const LearnCourseContentOutline = ({ content, video_idx, topic, courseId }) => {
   for (const topic in content["lessons"]) {
     topics.push(topic);
   }
+  let currentTopic = topic;
+
 
   return (
     <div className="absolute  right-0 w-[30%] h-[100%] bg-gray-100 overflow-y-auto ">
@@ -30,6 +32,8 @@ const LearnCourseContentOutline = ({ content, video_idx, topic, courseId }) => {
             videos={content["lessons"][topic]["videos"]}
             topic={topic}
             courseId={courseId}
+            active={topic.length>0 && currentTopic===topic?true:false}
+            currentVideoIdx={video_idx}
           />
         ))}
       </div>

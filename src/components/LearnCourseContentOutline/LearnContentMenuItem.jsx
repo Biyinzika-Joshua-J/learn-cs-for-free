@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
-const LearnContentMenuItem = ({title,mins, url, topic, video_idx, courseId }) => {
+const LearnContentMenuItem = ({title,mins, url, topic, video_idx, courseId, currentVideoIdx }) => {
+  
   return (
-      <Link to={`/learn/${courseId}/${topic}/${video_idx}`}>
-        <button className="flex flex-col  justify-between py-2 hover:bg-gray-500 w-[100%] px-2">
+      <Link to={`/learn/${courseId}/${topic}/${video_idx}`} className={``}>
+        <button className={`flex flex-col  justify-between py-2  w-[100%] px-2`}>
       <div className="flex flex-row items-center">
         <div class=" ">
           <input

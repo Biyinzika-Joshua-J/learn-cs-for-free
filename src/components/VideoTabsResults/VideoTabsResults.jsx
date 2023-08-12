@@ -8,6 +8,8 @@ const TabsContentResults = ({courseId}) => {
   const activeTabIdx = useSelector((state) => state.videoTabs.activeTabIdx);
   const content = courses_content["courses"][courseId]["content"]
 
+  console.log(content)
+
  
 
 
@@ -68,7 +70,7 @@ const TabsContentResults = ({courseId}) => {
         </div>
       )}
       {
-        activeTabIdx == 2 &&  <CourseContent content={content}/>
+        activeTabIdx == 2 &&  <CourseContent content={content} courseId={courseId}/>
       }
     </div>
   );

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import {Menu} from '../'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {CourseProgress} from '../';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -23,12 +24,12 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    if (location.pathname === "/learn") {
+    if (location.pathname.includes('learn')) {
       setShowCourseProgress(true);
     } else {
       setShowCourseProgress(false);
     }
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (mode == "dark") {
@@ -53,6 +54,7 @@ const Navbar = () => {
         </div>
         <div className="flex ">
           {/* progress show here */}
+          {showCourseProgress && <CourseProgress/>}
           <ThemeToggleButton />
           <div className="ml-8">
             <button className="dark:text-white" onClick={()=>openMenuHandler()}>
