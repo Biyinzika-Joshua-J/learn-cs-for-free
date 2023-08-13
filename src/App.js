@@ -1,14 +1,20 @@
-
+import React, {useEffect} from "react";
 import { Routes, Route } from "react-router";
 import { Navbar, Footer } from "./components";
 import { Home, CourseDetails, Learn, Quizes, About, Quize, Courses } from "./pages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
+import { buildCourseProgressSchema, readLocalStorageJSONData } from "./data/local_storage_manager";
 
 
 
 function App() {
+  useEffect(()=>{
+    buildCourseProgressSchema()
+  }, [])
+
+  console.log(readLocalStorageJSONData("courses_progress"))
   const mode = useSelector(state => state.theme.mode)
  
   return (
