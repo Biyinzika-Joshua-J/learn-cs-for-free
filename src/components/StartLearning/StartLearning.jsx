@@ -6,20 +6,23 @@ const StartLearning = () => {
     <div className="dark:bg-gray-900 dark:text-white">
       <div className="lg:w-[60%] py-8 w-[90%] mx-auto gap-5">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 items-center ">
-          <div className="">
+          <div className="lg:order-1 md:order-2 order-2">
             <img
-              width={250}
-              height={250}
+              width={350}
+              height={350}
               src={LearnVectorIllustration}
               alt="learning vector illustration"
               className=""
             />
           </div>
-          <div className="">
-            <h2 className="text-3xl pb-4 font-bold">Start Learning</h2>
-            <p className="">
-              Follow a structured approach in your learning. Show up every day
-              and live the rest to us. Get started by finding a course
+          <div className="lg:order-2 md:order-1 order-1">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Start Learning</h2>
+            <p className="dark:text-gray-400 text-gray-400">
+              Experience a well-structured curriculum that guides you through
+              essential concepts via top-notch YouTube videos. Progress
+              logically from fundamentals to advanced topics. Start your
+              learning journey, leveraging our interactive in-browser video
+              interface for a seamless educational adventure.
             </p>
           </div>
         </div>

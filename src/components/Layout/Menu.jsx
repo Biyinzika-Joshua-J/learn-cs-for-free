@@ -54,7 +54,7 @@ const Menu = ({ open, close }) => {
       style={{width:`${width}vw`}}
         className={`fixed ${
           open ? "translate-x-0" : "translate-x-96"
-        } transition-all ease-in-out bg-white top-0 right-0  h-screen z-50`}
+        } transition-all ease-in-out bg-white dark:bg-gray-900 dark:text-gray-100 top-0 right-0  h-screen z-50`}
       >
         <div className="flex flex-row justify-between py-4 px-4">
           <div className=""></div>

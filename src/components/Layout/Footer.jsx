@@ -12,9 +12,11 @@ const Footer = () => {
         <div className="">
           <div className="flex lg:flex-row md:flex-row flex-col items-center">
             <div className="text-3xl  mx-4 my-4">
+            <Link to={'/'}>
               <span className="font-bold italic text-[#3b82f6]">
                 LearnCSforFree
               </span>
+            </Link>
             </div>
             <div className=" mx-4 my-4 flex flex-row items-center]">
               <div className="mx-2">

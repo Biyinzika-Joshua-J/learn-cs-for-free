@@ -39,13 +39,13 @@ const About = () => {
               Introducing LearnCSForFree: Your Gateway to Computer Science
               Education
             </h2>
-            <p class="mb-4">
+            <p class="mb-4 text-xl">
               Welcome to LearnCSForFree, your premier destination for
               revolutionizing the way you learn about computer science. This app
               is designed to empower learners of all levels with the best
               educational videos curated from across the internet.
             </p>
-            <p>
+            <p class="text-xl">
               Whether you're a beginner curious about the world of coding or a
               seasoned programmer looking to expand your knowledge,
               LearnCSForFree is here to guide you on your journey.
@@ -70,7 +70,7 @@ const About = () => {
       {/*Mission*/}
       <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
             Our Mission
           </h1>
           <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
@@ -164,7 +164,7 @@ const About = () => {
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
               Our team
             </h2>
-            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class=" text-gray-500 text-xl dark:text-gray-400">
               Join LearnCSForFree: Enthusiasts and volunteers shaping cs
               education. Embrace collaboration, diverse minds. Together, create
               impactful change. Your contribution matters.
@@ -181,7 +181,7 @@ const About = () => {
                   src={member.image}
                   alt="Avatar"
                 />
-                <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-300">
                   <a href="#">{member.name}</a>
                 </h3>
                 <p>{member.role}</p>
@@ -262,12 +262,12 @@ const About = () => {
       {/* Team section */}
 
       {/*Curriculum Overview */}
-      <section className="">
+      <section className="dark:bg-gray-900">
         <div className="mx-auto w-[90%]">
-          <h1 className="text-4xl font-bold text-center">
+          <h1 className="text-4xl font-extrabold text-center dark:text-white">
             Curriculum Overview
           </h1>
-          <p className="text-center lg:w-[60%] w-[80%] mx-auto py-4">
+          <p className=" text-xl text-center text-gray-500 dark:text-gray-400 lg:w-[60%] w-[80%] mx-auto py-4">
             Welcome to our comprehensive educational app that covers a wide
             range of topics in computer science and programming. Our curriculum
             is designed to provide both beginners and experienced learners with
@@ -302,12 +302,12 @@ const About = () => {
       {/*Curriculum Overview */}
 
       {/* Community */}
-      <section className="">
+      <section className="dark:bg-gray-900">
         <div className="mx-auto w-[90%]">
-          <h1 className="text-center text-4xl">Community</h1>
+          <h1 className="text-center text-4xl dark:text-white font-extrabold">Community</h1>
           <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-5 py-8 items-center">
             <div className="">
-              <p className="text-2xl mb-8">
+              <p className="text-xl mb-8 dark:text-gray-400 text-gray-500">
                 Connect, share, and learn with fellow learners on
                 LearnCSForFree. Join our WhatsApp group for real-time
                 discussions, mentorship, and networking opportunities. Your
@@ -332,9 +332,9 @@ const About = () => {
       </section>
       {/* Community */}
       {/*CTA*/}
-      <section className="">
+      <section className="dark:bg-gray-900">
         <div className="mx-auto w-[80%] py-8">
-          <h1 className="text-center text-4xl">Ready to start learning?</h1>
+          <h1 className="text-center text-4xl font-extrabold dark:text-white">Ready to start learning?</h1>
           <div className="flex justify-center items-center">
             <a
               href="#"

@@ -4,7 +4,7 @@ import { Card } from "../components";
 
 const Courses = () => {
   return (
-    <div className="dark:bg-black dark:text-white py-8">
+    <div className="dark:bg-gray-900 dark:text-white py-8">
       <div className="py-8">
         <h1 className="text-center text-3xl font-bold">
           All Courses
