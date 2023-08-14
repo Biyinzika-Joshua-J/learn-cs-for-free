@@ -5,12 +5,12 @@ import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 
-const CourseProgress = () => {
-  let percentage = 18;
+const CourseProgress = ({progress}) => {
+ 
   return (
     <div className="mr-8" style={{ width: 50, height: 50 }}>
       <CircularProgressbarWithChildren
-        value={percentage}
+        value={progress}
         styles={{
           path: {
             // Path color

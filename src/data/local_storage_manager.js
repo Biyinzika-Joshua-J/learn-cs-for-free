@@ -48,3 +48,6 @@ export function buildCourseProgressSchema(){
 export function readLocalStorageJSONData(item){
     return JSON.parse(localStorage.getItem(item));
 }
+
+
+

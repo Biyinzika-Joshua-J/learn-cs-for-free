@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { Routes, Route } from "react-router";
 import { Navbar, Footer } from "./components";
-import { Home, CourseDetails, Learn, Quizes, About, Quize, Courses } from "./pages";
+import { Home, CourseDetails, Learn, Quizes, About, Quize, Courses, Contact, Donate } from "./pages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,12 +10,7 @@ import { buildCourseProgressSchema, readLocalStorageJSONData } from "./data/loca
 
 
 function App() {
-  useEffect(()=>{
-    buildCourseProgressSchema()
-  }, [])
-
-  console.log(readLocalStorageJSONData("courses_progress"))
-  const mode = useSelector(state => state.theme.mode)
+  const mode = useSelector(state => state.theme.mode);
  
   return (
     <div className={`${mode} flex flex-col min-h-screen relative`}>
@@ -28,6 +23,8 @@ function App() {
         <Route path="/quizes" element={<Quizes/>} />
         <Route path="/quizes/:id" element={<Quize/>} />
         <Route path="/courses" element={<Courses/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/donate" element={<Donate/>} />
       </Routes>
       <Footer />
     </div>

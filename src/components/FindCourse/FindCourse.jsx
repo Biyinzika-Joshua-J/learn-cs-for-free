@@ -1,8 +1,9 @@
 import React from 'react'
+import SearchVector from '../../assets/images/searching-vector.png'
 
 const FindCourse = () => {
   return (
-    <div className='dark:bg-black dark:text-white'>
+    <div className='dark:bg-gray-900 dark:text-white'>
         <div className="lg:w-[60%] py-8 w-[90%] mx-auto gap-5">
             <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 items-center ">
                 <div className="">
@@ -15,7 +16,7 @@ const FindCourse = () => {
                     </p>
                 </div>
                 <div className="">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/30/12/14/search-1013911_1280.jpg" alt="" className="" />
+                    <img src={SearchVector} alt="Searching vector illustration" className="" />
                 </div>
             </div>
         </div>

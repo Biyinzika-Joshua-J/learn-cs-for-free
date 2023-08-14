@@ -7,6 +7,8 @@ import {Menu} from '../'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {CourseProgress} from '../';
+import { useParams } from "react-router";
+import { readLocalStorageJSONData } from "../../data/local_storage_manager";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -14,6 +16,14 @@ const Navbar = () => {
   const location = useLocation();
   const [showCourseProgress, setShowCourseProgress] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const currentCourseId = useSelector(state => state.courses.currentCourseId);
+  const courseProgressIsUpdated = useSelector(state => state.courses.progress)
+  
+
+  //console.log(readLocalStorageJSONData('courses_progress')[currentCourseId]["total_progress_percentage"])
+
+
+ 
 
   function openMenuHandler(){
     setMenuOpen(true);
@@ -43,7 +53,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className="w-[100vw] py-4 dark:bg-black relative">
+    <nav className="w-[100vw] py-4 dark:bg-gray-950 relative">
       <div className="mx-auto w-[90%] flex flex-row justify-between">
         <div className="text-3xl dark:text-white">
           <Link to={"/"}>
@@ -54,7 +64,7 @@ const Navbar = () => {
         </div>
         <div className="flex ">
           {/* progress show here */}
-          {showCourseProgress && <CourseProgress/>}
+          {showCourseProgress && <CourseProgress progress={50}/>}
           <ThemeToggleButton />
           <div className="ml-8">
             <button className="dark:text-white" onClick={()=>openMenuHandler()}>

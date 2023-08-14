@@ -5,5 +5,5 @@ export {default as Learn} from './Learn'
 export {default as Quizes} from './Quizes'
 export {default as Quize} from './Quize'
 export {default as About} from './About'
-
-
+export {default as Contact} from './Contact'
+export {default as Donate} from './Donate'
