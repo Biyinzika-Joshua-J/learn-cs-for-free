@@ -45,6 +45,9 @@ const Footer = () => {
                 <Link to="/courses" className="dark:hover:text-[#3b82f6] hover:text-[#3b82f6] underline underline-offset-4 capitalize">All Courses</Link>
               </li>
               <li className="my-2 mx-2">
+                <Link to="/quizes" className="dark:hover:text-[#3b82f6] hover:text-[#3b82f6] underline underline-offset-4 capitalize">Quizes</Link>
+              </li>
+              <li className="my-2 mx-2">
                 <Link to="/contact" className="dark:hover:text-[#3b82f6] hover:text-[#3b82f6] underline underline-offset-4 capitalize">Contact</Link>
               </li>
 

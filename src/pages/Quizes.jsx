@@ -15,9 +15,9 @@ const Quizes = () => {
   }
 
   return (
-    <div className="py-8">
-      <div className="mx-auto w-[90%] flex flex-col items-center">
-        <h1 className="text-center text-3xl pb-10">Quizes</h1>
+    <div className="py-8 dark:bg-gray-900">
+      <div className="mx-auto w-[90%] flex flex-col items-center justify-center">
+        <h1 className="text-center text-4xl font-extrabold dark:text-white pb-10">Quizes</h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5">
           {quizes["quizes"].map((quize, idx) => (
             <Card

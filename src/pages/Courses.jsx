@@ -10,7 +10,7 @@ const Courses = () => {
           All Courses
         </h1>
       </div>
-      <div className="mx-auto w-[90%]">
+      <div className="mx-auto w-[90%] flex justify-center ">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5 ">
           {coursesList["courses"].slice(0, 4).map((course, idx) => (
             <Card
